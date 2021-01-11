@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Programming Keyboard</title>
+  </head>
+  <body>
+    <div class="select-header">
+      <h1 class="main-header"></h1>
+      Select which command you need
+    </div>
+    <div class="select-command">
+      <button class="programming-symbol symbol">[</button>
+      <button class="programming-symbol symbol">]</button>
+      <button
+        class="programming-symbol symbol"
+        onclick="highlightCurlyBracks()"
+      >
+        {
+      </button>
+      <button class="programming-symbol symbol">}</button>
+      <button class="programming-symbol symbol">\</button>
+      <button class="programming-symbol symbol">|</button>
+      <button class="programming-symbol symbol">~</button>
+      <button class="programming-symbol symbol">`</button>
+    </div>
+    <!-- Keyboard section-->
+    <div class="keyboard">
+      <ul>
+        <li class="touchbar"></li>
+        <li class="number">
+          <span class="number--top"> °</span>
+          <span>§</span>
+        </li>
+        <li class="number" id="num1">
+          <span class="number--top">!</span>
+          <span>1</span>
+        </li>
+        <li class="number">
+          <span class="number--top">"</span>
+          <span>2 @</span>
+        </li>
+        <li class="number">
+          <span class="number--top">#</span>
+          <span>3</span>
+        </li>
+        <li class="number">
+          <span class="number--top">€</span>
+          <span>4</span>
+        </li>
+        <li class="number">
+          <span class="number--top">%</span>
+          <span>5</span>
+        </li>
+        <li class="number">
+          <span class="number--top">&</span>
+          <span>6</span>
+        </li>
+        <li class="number">
+          <span class="number--top">/</span>
+          <span>7</span>
+        </li>
+        <li class="number" id="num8">
+          <span class="number--top">(</span>
+          <span>8</span>
+        </li>
+        <li class="number">
+          <span class="number--top">)</span>
+          <span>9</span>
+        </li>
+        <li class="number">
+          <span class="number--top">=</span>
+          <span>0</span>
+        </li>
+        <li class="number">
+          <span class="number--top">?</span>
+          <span>+</span>
+        </li>
+        <li class="number">
+          <span class="number--top">`</span>
+          <span>´</span>
+        </li>
+        <li class="symbol backspace">⟵</li>
+        <li class="symbol tab">⇥</li>
+        <li>q</li>
+        <li>w</li>
+        <li>e</li>
+        <li>r</li>
+        <li>t</li>
+        <li>y</li>
+        <li>u</li>
+        <li>i</li>
+        <li>o</li>
+        <li>p</li>
+        <li id="swedishA">å</li>
+        <li class="punctuation">
+          <span>^</span>
+          <span>¨</span>
+        </li>
+        <li class="symbol return">↩</li>
+        <li class="symbol caps">⇪</li>
+        <li>a</li>
+        <li>s</li>
+        <li>d</li>
+        <li>f</li>
+        <li>g</li>
+        <li>h</li>
+        <li>j</li>
+        <li>k</li>
+        <li>l</li>
+        <li>ö</li>
+        <li>ä</li>
+        <li class="punctuation">
+          <span>*</span>
+          <span>´</span>
+        </li>
+        <li class="symbol return--bottom"></li>
+        <li class="symbol left-shift" id="shift">⇧</li>
+        <li class="punctuation">
+          <span>></span>
+          <span><</span>
+        </li>
+        <li>z</li>
+        <li>x</li>
+        <li>c</li>
+        <li>v</li>
+        <li>b</li>
+        <li>n</li>
+        <li>m</li>
+        <li class="punctuation">
+          <span>;</span>
+          <span>,</span>
+        </li>
+        <li class="punctuation">
+          <span>:</span>
+          <span>.</span>
+        </li>
+        <li class="number">
+          <span class="number--top">_</span>
+          <span>-</span>
+        </li>
+        <li class="symbol right-shift">⇧</li>
+        <li class="symbol text fn">fn</li>
+        <li class="symbol text">control</li>
+        <li class="symbol text" id="alt">
+          <span class="text--top">alt</span>
+          <span>option</span>
+        </li>
+        <li class="symbol text command">
+          <span class="text--top">⌘</span>
+          <span>command</span>
+        </li>
+        <li class="symbol space"></li>
+        <li class="symbol text command">
+          <span class="text--top text--flip">⌘</span>
+          <span>command</span>
+        </li>
+        <li class="symbol text">
+          <span class="text--top text--flip">alt</span>
+          <span>option</span>
+        </li>
+        <li>
+          <svg
+            class="icon"
+            viewBox="0 0 32 32"
+            width="12px"
+            height="12px"
+            fill="currentcolor"
+            stroke="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path d="M22 30 L6 16 22 2 Z"></path>
+          </svg>
+        </li>
+        <li class="arrow-pair">
+          <span
+            ><svg
+              class="icon"
+              viewBox="0 0 32 32"
+              width="12px"
+              height="12px"
+              fill="currentcolor"
+              stroke="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path d="M30 22 L16 6 2 22 Z"></path></svg
+          ></span>
+          <span
+            ><svg
+              class="icon"
+              viewBox="0 0 32 32"
+              width="12px"
+              height="12px"
+              fill="currentColor"
+              stroke="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path d="M30 10 L16 26 2 10 Z"></path></svg
+          ></span>
+        </li>
+        <li>
+          <svg
+            class="icon"
+            viewBox="0 0 32 32"
+            width="12px"
+            height="12px"
+            fill="currentcolor"
+            stroke="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path d="M10 30 L26 16 10 2 Z"></path>
+          </svg>
+        </li>
+      </ul>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
