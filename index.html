@@ -12,19 +12,33 @@
       Select which command you need
     </div>
     <div class="select-command">
-      <button class="programming-symbol symbol">[</button>
-      <button class="programming-symbol symbol">]</button>
-      <button
-        class="programming-symbol symbol"
-        onclick="highlightCurlyBracks()"
-      >
+      <button class="programming-symbol symbol" onclick="squareBracksOpen()">
+        [
+      </button>
+      <button class="programming-symbol symbol" onclick="squareBracksClose()">
+        ]
+      </button>
+      <button class="programming-symbol symbol" onclick="curlyBraceOpen()">
         {
       </button>
-      <button class="programming-symbol symbol">}</button>
+      <button class="programming-symbol symbol" onclick="curlyBraceClose()">
+        }
+      </button>
       <button class="programming-symbol symbol">\</button>
-      <button class="programming-symbol symbol">|</button>
-      <button class="programming-symbol symbol">~</button>
+      <button class="programming-symbol symbol" onclick="orSymbol()">|</button>
+      <button class="programming-symbol symbol" onclick="squiggleKey()">
+        ~
+      </button>
       <button class="programming-symbol symbol">`</button>
+    </div>
+    <div class="practice">
+      <h2>Practice Typing the commands here</h2>
+      <input
+        type="text"
+        name="practice"
+        id="practice"
+        placeholder="practice your commands here"
+      />
     </div>
     <!-- Keyboard section-->
     <div class="keyboard">
@@ -58,7 +72,7 @@
           <span class="number--top">&</span>
           <span>6</span>
         </li>
-        <li class="number">
+        <li class="number" id="num7">
           <span class="number--top">/</span>
           <span>7</span>
         </li>
@@ -66,7 +80,7 @@
           <span class="number--top">(</span>
           <span>8</span>
         </li>
-        <li class="number">
+        <li class="number" id="num9">
           <span class="number--top">)</span>
           <span>9</span>
         </li>
@@ -95,7 +109,7 @@
         <li>o</li>
         <li>p</li>
         <li id="swedishA">å</li>
-        <li class="punctuation">
+        <li class="punctuation" id="up-key">
           <span>^</span>
           <span>¨</span>
         </li>
